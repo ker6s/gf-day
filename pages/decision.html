@@ -1,0 +1,43 @@
+<style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #fffafc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: white;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      animation: popup 0.4s ease;
+    }
+    @keyframes popup {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .message {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background-color: #ff66a3;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+  </style>
+
+<div class="container">
+<div class="message">Would you like to read the card?</div>
+<button class="btn" onclick="navigate('card')">Yes</button>
+<button class="btn" onclick="navigate('sad')">no ty</button>
+</div>

@@ -1,0 +1,209 @@
+<style>
+    @keyframes popup {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      justify-content: center;
+      position: relative;
+    }
+
+    .blurred {
+      filter: blur(4px);
+      pointer-events: none;
+    }
+
+    .container {
+      background-color: white;
+      border-radius: 30px;
+      border: 2px dashed pink;
+      padding: 40px 30px;
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 0 25px rgba(255, 192, 203, 0.4);
+      animation: popup 0.6s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .envelope-img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.2);
+      margin-bottom: 25px;
+    }
+
+    .main-text {
+      font-size: 20px;
+      font-weight: bold;
+      color: #ff4d94;
+    }
+
+    .emoji {
+      font-size: 20px;
+      margin-bottom: 25px;
+      color: #ff4d94;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 20px;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn.open {
+      background: linear-gradient(to right, #ffa4c9, #ffb6d9);
+    }
+
+    .btn.open:hover {
+      background: linear-gradient(to right, #ff85b3, #ffaad4);
+      transform: scale(1.05);
+    }
+
+    .btn.no {
+      background: linear-gradient(to right, #9fffe0, #b2fff2);
+      color: #444;
+    }
+
+    .btn.no:hover {
+      background: linear-gradient(to right, #84e8cd, #a9f7e5);
+      transform: scale(1.05);
+    }
+
+    .music-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #f06292;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.4);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .modal {
+      background: white;
+      border: 2px dashed pink;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(255, 192, 203, 0.6);
+      animation: popup 0.4s ease;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    .modal .modal-btns {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .modal-btns button {
+      padding: 8px 20px;
+      font-size: 14px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .confirm {
+      background-color: #f88aaf;
+      color: white;
+    }
+
+    .confirm:hover {
+      background-color: #f06d9c;
+    }
+
+    .cancel {
+      background-color: #c2fff5;
+      color: #333;
+    }
+
+    .cancel:hover {
+      background-color: #a4efe2;
+    }
+  </style>
+
+<div class="zigzag"></div>
+<div class="container" id="mainContent">
+<img alt="Envelope" class="envelope-img" src="envelope.jpg"/>
+<div class="main-text">you've received something!!</div>
+<div class="main-text">do you wanna open it..?!</div>
+<div class="emoji">&gt;_&lt;</div>
+<div class="button-group">
+<button class="btn open" onclick="navigate('card')">yessss!!!!</button>
+<button class="btn no" onclick="showConfirm()">no, i hate you.</button>
+</div>
+</div>
+<div class="zigzag" style="transform: rotate(180deg); margin-top: -30px;"></div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="confirmModal">
+<div class="modal">
+<div class="main-text">oh... a-are you sure?..</div>
+<div class="modal-btns">
+<button class="confirm" onclick="navigate('sad')">yes. i'm sure.</button>
+<button class="cancel" onclick="goBack()">no..!! i'm sorryy</button>
+</div>
+</div>
+</div>
+<script>
+    function showConfirm() {
+      document.getElementById("confirmModal").style.display = "flex";
+      document.getElementById("mainContent").classList.add("blurred");
+    }
+
+    function goBack() {
+      document.getElementById("confirmModal").style.display = "none";
+      document.getElementById("mainContent").classList.remove("blurred");
+
+      const noBtn = document.querySelector(".btn.no");
+      if (noBtn) noBtn.remove();
+    }
+  </script>

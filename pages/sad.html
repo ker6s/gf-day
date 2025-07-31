@@ -1,0 +1,89 @@
+<style>
+    @keyframes popup {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      border-radius: 30px;
+      border: 2px dashed pink;
+      padding: 40px 30px;
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 0 25px rgba(255, 192, 203, 0.4);
+      animation: popup 0.5s ease;
+    }
+
+    .sad-img {
+      width: 350px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(255, 105, 180, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .message {
+      font-size: 18px;
+      color: #f06292;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .return-button {
+      background: linear-gradient(to right, #ffa4c9, #ffb6d9);
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .return-button:hover {
+      background: linear-gradient(to right, #ff85b3, #ffaad4);
+      transform: scale(1.05);
+    }
+
+    .music-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #f06292;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+
+<div class="zigzag"></div>
+<div class="container">
+<img alt="sad" class="sad-img" src="cinna-sad.jpg"/>
+<div class="message">
+      oh, i get it... sigh, i guess i'll kms &gt;︿&lt;
+    </div>
+<button class="return-button" onclick="navigate('envelope')">go back..</button>
+</div>

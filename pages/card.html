@@ -1,0 +1,257 @@
+<style>
+    @keyframes popup {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      background-color: white;
+      border: 3px solid pink;
+      border-radius: 30px;
+      padding: 30px;
+      text-align: center;
+      width: 90%;
+      max-width: 600px;
+      margin: 40px 0;
+      box-shadow: 0 0 20px rgba(255, 192, 203, 0.4);
+      animation: popup 0.6s ease;
+    }
+
+    .top-image {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 26px;
+      color: #e91e63;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #e91e63;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    .card-message p {
+      font-size: 15px;
+      color: #444;
+      text-align: left;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    .home-button {
+      background: linear-gradient(to right, #ffa4c9, #ffb6d9);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 20px;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .home-button:hover {
+      background: linear-gradient(to right, #ff85b3, #ffaad4);
+      transform: scale(1.05);
+    }
+
+    /* Music Icon and Slider */
+	.music-wrapper {
+	  position: fixed;
+	  top: 10px;
+	  left: 10px;
+	  z-index: 100;
+	}
+
+	.volume-container {
+	  position: relative;
+	  height: 50px;
+	  width: 50px;
+	  background: linear-gradient(to right, #ffa4c9, #ffb6d9);
+	  border-radius: 15px;
+	  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+	  overflow: visible;
+	  transition: width 0.3s ease;
+	}
+
+	.music-wrapper:hover .volume-container {
+	  width: 200px;
+	}
+
+	.music-icon {
+	  width: 50px;
+	  height: 50px;
+	  font-size: 20px;
+	  color: white;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  cursor: pointer;
+	  transition: transform 0.3s ease;
+	  z-index: 2;
+	  position: relative;
+	}
+
+	.music-icon:hover {
+	  transform: scale(1.05);
+	}
+
+	.volume-slider {
+	  position: absolute;
+	  left: 60px;
+	  top: 5px;
+	  opacity: 0;
+	  transition: opacity 0.3s ease;
+	  background: transparent;
+	  display: flex;
+	  align-items: center;
+	  height: 40px;
+	}
+
+	.music-wrapper:hover .volume-slider {
+	  opacity: 1;
+	}
+
+	.volume-slider input[type="range"] {
+	  width: 120px;
+	  height: 6px;
+	  background: #ffe0ec;
+	  border-radius: 4px;
+	  appearance: none;
+	  outline: none;
+	  cursor: pointer;
+	}
+
+	.volume-slider input[type="range"]::-webkit-slider-thumb {
+	  appearance: none;
+	  width: 14px;
+	  height: 14px;
+	  background: white;
+	  border-radius: 50%;
+  	  box-shadow: 0 0 2px rgba(0,0,0,0.3);
+	}
+
+	.volume-slider input[type="range"]::-moz-range-thumb {
+	  width: 14px;
+	  height: 14px;
+	  background: white;
+	  border-radius: 50%;
+	  border: none;
+	  box-shadow: 0 0 2px rgba(0,0,0,0.3);
+	}
+  </style>
+
+<div class="container">
+<img alt="My Love" class="top-image" src="your-image.jpg"/>
+<h1>To My Sweet Lovely Girlfriend</h1>
+<h2>(^o^)</h2>
+<div class="card-message">
+<p>hiiiiii my babyy!!</p>
+<p>before all of this.. i just wanted to take a moment to write all of this out not just because it’s a special occasion or anything, but just because i’ve been thinking about how much i appreciate you!! and even though it hasn’t been that long since we met, i feel like i’ve already grown so attached to you in the best way possible..</p>
+<p>i know this might all sound cliché, maybe like something out of a movie or some cheesy ass poem, but it’s honestly just one of the few ways i know how to express my gratitude for you.. especially when we are seperated by thousands of miles.. :(</p>
+<p>it genuinely still amazes me how quickly you’ve become such a meaningful part of my life, whether we’re talking for hours or just sitting in comfortable silence, i genuinely have enjoyed every second i get to spend with you.. even when we’re not doing anything particularly exciting or even when we're just sending each other instagram reels or tiktoks it still means so much to me, i love when you send me silly little videos, or ones that are so random but somehow remind you of me, and when you send something with a sweet little "us", it always makes me smile more than you know.. it’s like even in those small moments, you’re thinking of us, and it means everything!! it’s in those quiet, simple little things that i realize how special this is. you make even the most ordinary things feel warm and comforting..</p>
+<p>and i genuinely love sharing even the tiniest bits of my day with you..! whether it’s sending you random ass pics i take, sharing a random thought that just.. popped into my head, or even telling you about something small that happened.. it all just.. feels better when it’s shared with you!! i love when you randomly ask me what i’m doing or just.. tell me something as simple as “this reminded me of you.” every one of those simple little things adds up to something that feels big and irreplaceable...</p>
+<p>i know sometimes things can feel a little awkward, or we might not always know what to say and that’s okay in all honesty, i kind of love those moments too.. because it’s not about constantly filling the space with words, it’s about you just.. being there! and i’m really grateful I get to just exist beside you like that..!</p>
+<p>your voice, your laugh, your little giggles they all live in my head like it's my favorite song i have going on loop.. there’s a softness in the way you speak that makes me feel safe, and your laughter? goodness.. it’s seriously one of my favorite sounds.. you don’t even have to try just you being you brings light into my day, everything about you feels like home in a way i didn’t know i apparently needed...</p>
+<p>and if i’m being honest, there are times when i get scared.. scared of messing things up, scared of not being enough, or even just scared of the idea of losing you.. the thought of you one day just, yk not being here even if it’s just a passing worry it makes my chest tighten a little... it’s not that i don’t trust you or any of the sorts, it’s just how much you’ve come to mean to me in such a short time, and i guess.. that kind of fear only comes from me starting to really care about you... i try not to let it weigh down our moments, but i felt like it was worth saying because i want you to know how much i truly value this, more specifically.. value **you**.</p>
+<p>sometimes it’s just the way you say my name, or how your eyes light up when you're passionate about something, those tiny, flickering things stay with me long after we’ve said goodnight.. and i notice them all. the way your texts sound like your voice in my head, the way your emojis always match your mood, the comfort you offer, often without even realizing it.. you’re so effortlessly comforting just by being present. it’s such a strange but a beautiful feeling.</p>
+<p>soo erm, yeah… maybe it hasn’t been that long. but what we’ve shared already means a lot to me, i don’t take a single moment for granted, andd.. i hope you know that..!! thank you for being you, for letting me be a part of your world, even in the smallest ways you can think of.. you’ve made my life feel a little calmer, a little happier, and a lot more whole.</p>
+<p>i appreciate you in words that.. i can't even describe,</p>
+<p>i hope time is kind to us, i hope the days ahead give us reasons to laugh, to hold on tighter, to grow more gently.. i want to keep learning you, day by day, not just the easy parts but all the small, complicated, beautiful pieces..! i want the future to hold space for us, not just as me or you, but as something soft and safe together!! because if it’s with you, i want it all..</p>
+</div>
+<button class="home-button" onclick="navigate('index')">Home</button>
+</div>
+<!-- Music Icon + Volume Slider -->
+
+
+<script>
+    // Scroll fade-in effect
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle('fade-in', entry.isIntersecting);
+      });
+    }, {
+      threshold: 0.25
+    });
+
+    document.querySelectorAll('.card-message p').forEach(p => observer.observe(p));
+
+    // Music toggle and volume
+  const audio = document.getElementById("bg-music");
+  const volumeSlider = document.getElementById("volumeSlider");
+  const musicIcon = document.querySelector(".music-icon");
+
+  let previousVolume = 0.5;
+  audio.volume = previousVolume;
+
+  function toggleMusic() {
+    if (audio.volume > 0) {
+      previousVolume = audio.volume;
+      audio.volume = 0;
+      volumeSlider.value = 0;
+      musicIcon.textContent = "🔇";
+    } else {
+      audio.volume = previousVolume;
+      volumeSlider.value = previousVolume;
+      musicIcon.textContent = "🔊";
+    }
+  }
+
+  function changeVolume(val) {
+    audio.volume = val;
+    if (val > 0) {
+      musicIcon.textContent = "🔊";
+      previousVolume = val;
+    } else {
+      musicIcon.textContent = "🔇";
+    }
+  }
+
+  volumeSlider.addEventListener("input", function () {
+    changeVolume(this.value);
+  });
+
+  // Optional autoplay after first click
+  document.addEventListener('click', () => {
+    audio.play().catch(() => {});
+  }, { once: true });
+
+    function changeVolume(val) {
+      audio.volume = val;
+    }
+
+    document.getElementById("volumeSlider").addEventListener("input", function() {
+      changeVolume(this.value);
+    });
+
+    // Optional autoplay after interaction
+    document.addEventListener('click', () => {
+      audio.play().catch(() => {});
+    }, { once: true });
+  </script>
